@@ -1,0 +1,12 @@
+export const REQUEST = "REQUEST";
+export const SUCCESS = "SUCCESS";
+export const FAILURE = "FAILURE";
+export const CREATE = "CREATE";
+export const EDIT = "EDIT";
+export const DELETE = "DELETE";
+export const TOGGLE_ADDING = "TOGGLE_ADDING";
+export const TOGGLE_EDITING = "TOGGLE_EDITING";
+export const TOGGLE_DELETING = "TOGGLE_DELETING";
+export const DIRECT_SELECT = "DIRECT_SELECT";
+export const ERROR_RESET = "ERROR_RESET";
+export const THING_RESET = "THING_RESET";

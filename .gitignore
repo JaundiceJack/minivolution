@@ -1,0 +1,5 @@
+# Don't publish db passwords & webtoken keys
+.env
+# Don't fill up my github
+node_modules/
+node_modules
