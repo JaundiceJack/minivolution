@@ -26,9 +26,13 @@ const CellWindow = () => {
           background: cell.state === 1 ?
           `radial-gradient(
             rgb(
-              ${Math.abs(Math.sin(cell.updated))*255},
-              ${Math.abs(Math.cos(cell.updated))*255},
-              ${Math.abs(Math.tan(cell.updated))*255}),
+              ${(Math.abs(Math.sin(cell.updated +
+                (Math.PI * 0.33 * cell.updated+1))) * 200)+50},
+              ${(Math.abs(Math.sin(cell.updated +
+                (Math.PI * 0.66 * cell.updated+1))) * 200)+50},
+              ${(Math.abs(Math.sin(cell.updated +
+                (Math.PI * 0.99 * cell.updated+1))) * 200)+50}
+            ),
             rgb(0, 0, 0))` :
           'black'
         }}
