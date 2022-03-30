@@ -27,8 +27,8 @@ const CellWindow = () => {
           `radial-gradient(
             rgb(
               ${(((Math.sin(cell.updated) + 1) / 2) * 200) + 50},
-              ${(((Math.sin(cell.updated + Math.PI/2) + 1) / 2) * 200) + 50},
-              ${(((Math.sin(cell.updated + Math.PI) + 1) / 2) * 200) + 50}
+              ${(((Math.sin(cell.updated + 2*Math.PI/3) + 1) / 2) * 200) + 50},
+              ${(((Math.sin(cell.updated + 4*Math.PI/3) + 1) / 2) * 200) + 50}
             ),
             rgb(0, 0, 0))` :
           'black'
@@ -48,13 +48,20 @@ const CellWindow = () => {
   // Set a default cell pattern
   useEffect(() => {
     let initialCells = cells.map(cell => {return {updated: cell.updated, state: cell.state}});
-    initialCells[1273].state = 1;
-    initialCells[1323].state = 1;
-    initialCells[1373].state = 1;
-    initialCells[1374].state = 1;
-    initialCells[1375].state = 1;
-    initialCells[1325].state = 1;
-    initialCells[1275].state = 1;
+    initialCells[672].state = 1;
+    initialCells[722].state = 1;
+    initialCells[772].state = 1;
+    initialCells[724].state = 1;
+    initialCells[673].state = 1;
+    initialCells[723].state = 1;
+    initialCells[773].state = 1;
+    initialCells[774].state = 1;
+    initialCells[775].state = 1;
+    initialCells[725].state = 1;
+    initialCells[675].state = 1;
+    initialCells[676].state = 1;
+    initialCells[726].state = 1;
+    initialCells[776].state = 1;
     setCells(initialCells);
   }, [])
 
