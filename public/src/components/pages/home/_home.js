@@ -2,10 +2,10 @@ import CellWindow from './cellWindow.js';
 
 const Home = () => {
   return (
-    <div className="h-full flex sm:flex-row flex-col justify-center relative">
+    <div className="h-full flex xl:flex-row flex-col justify-center relative">
       <CellWindow />
       <div className={`self-center bg-instructions w-80 sm:w-104 rounded-lg
-        sm:absolute right-4 top-14 p-8`}>
+        xl:absolute right-4 top-14 p-8`}>
         <h1 className={`font-bold bg-clip-text text-transparent text-2xl text-center
           bg-gradient-to-br from-green-400 to-indigo-400 mb-6`}>
           MiniVolution</h1>
