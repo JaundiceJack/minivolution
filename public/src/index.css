@@ -1,6 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
+.font-jose   { font-family: 'Josefin Sans', 'Arial'; }
 
 body {
   margin: 0;
@@ -22,6 +25,6 @@ code {
   grid-template-rows: repeat(50, 1fr);
 }
 
-.cell0 { background: radial-gradient(#0F0, #000) }
-.cell1 { background: radial-gradient(#00F, #000) }
-.cell2 { background: radial-gradient(#F00, #000) }
+.bg-instructions {
+  background: radial-gradient(rgba(50,50,50,0.95), rgba(50,50,50,0.85));
+}

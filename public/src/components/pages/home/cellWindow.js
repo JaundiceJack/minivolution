@@ -26,23 +26,16 @@ const CellWindow = () => {
           background: cell.state === 1 ?
           `radial-gradient(
             rgb(
-              ${(Math.abs(Math.sin(cell.updated +
-                (Math.PI * 0.33 * cell.updated+1))) * 200)+50},
-              ${(Math.abs(Math.sin(cell.updated +
-                (Math.PI * 0.66 * cell.updated+1))) * 200)+50},
-              ${(Math.abs(Math.sin(cell.updated +
-                (Math.PI * 0.99 * cell.updated+1))) * 200)+50}
+              ${(((Math.sin(cell.updated) + 1) / 2) * 200) + 50},
+              ${(((Math.sin(cell.updated + Math.PI/2) + 1) / 2) * 200) + 50},
+              ${(((Math.sin(cell.updated + Math.PI) + 1) / 2) * 200) + 50}
             ),
             rgb(0, 0, 0))` :
           'black'
         }}
         onClick={e => toggleCell(i, e)}
         onMouseOver={e => toggleCell(i, e, true)}
-        className={`h-full w-full
-          ${i === 0 && "rounded-tl"}
-          ${i === gridSize-1 && "rounded-tr"}
-          ${i === (gridSize*gridSize)-gridSize && "rounded-bl"}
-          ${i === (gridSize*gridSize)-1 && "rounded-br"}`} />
+        className={`h-full w-full rounded-full`} />
     ));
   }
 
@@ -51,9 +44,23 @@ const CellWindow = () => {
     play && setTimeout(() => { updateCells(); }, 200);
   }, [play, cells]);
 
+
+  // Set a default cell pattern
+  useEffect(() => {
+    let initialCells = cells.map(cell => {return {updated: cell.updated, state: cell.state}});
+    initialCells[1273].state = 1;
+    initialCells[1323].state = 1;
+    initialCells[1373].state = 1;
+    initialCells[1374].state = 1;
+    initialCells[1375].state = 1;
+    initialCells[1325].state = 1;
+    initialCells[1275].state = 1;
+    setCells(initialCells);
+  }, [])
+
   // Produce the next generation of cells
   const updateCells = () => {
-    let nextCells = cells.map(cell => {return {updated: cell.updated, state: cell.state}});;
+    let nextCells = cells.map(cell => {return {updated: cell.updated, state: cell.state}});
     // Count the neighbors for each cell to determine if it should live or die
     nextCells.forEach((cell, index) => {
       let neighbors = 0;
@@ -93,7 +100,7 @@ const CellWindow = () => {
     <div className="h-full flex flex-col items-center justify-center">
       <div className="h-full p-4 mt-10">
         <div className="p-2 bg-gray-700 rounded-lg shadow-lg">
-          <div className="sm:h-96 h-80 sm:w-96 w-80"
+          <div className="sm:h-96 h-80 sm:w-96 w-80 bg-black rounded-lg"
             style={{
               display: 'grid',
               gridTemplateColumns: `repeat(${gridSize}, 1fr)`,
@@ -102,11 +109,6 @@ const CellWindow = () => {
             {renderCells()}
           </div>
         </div>
-      </div>
-
-      <div>
-        <p className="sm:inline hidden">Hold the shift key or click to draw cells.</p>
-        <p className="sm:hidden inline">Click to draw cells.</p>
       </div>
 
       <div className="flex flex-row p-4 mb-10">
