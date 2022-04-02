@@ -38,7 +38,7 @@ const GameWindow = ({ size, cells, toggleCell }) => {
         <div className="w-full h-2 bg-gray-500 mb-2 opacity-25 border-r border-l border-gray-300 border-b" />
         <div className="mx-4 sm:px-7 py-4 bg-gray-600 rounded-xl rounded-br-3xl">
           <div
-            className="h-80 w-80 bg-black rounded-lg mx-auto"
+            className="h-80 sm:w-80 w-72 bg-black rounded-lg mx-auto"
             style={{
               display: "grid",
               gridTemplateColumns: `repeat(${size}, 1fr)`,
