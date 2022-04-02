@@ -102,7 +102,7 @@ const Game = () => {
   return (
     <div
       className={`flex flex-col items-center justify-center
-      sm:m-0 mx-3 mb-10 container-shadow rounded-xl rounded-br-3xl`}
+      sm:m-0 mx-3 sm:mb-0 mb-10 container-shadow rounded-xl rounded-br-3xl`}
     >
       <GameWindow cells={cells} toggleCell={toggleCell} size={gridSize} />
 

@@ -6,8 +6,8 @@ import Speaker from "./speaker";
 const GameControls = ({ play, generation, togglePlay, reset }) => {
   return (
     <div
-      style={{ minHeight: 250 + "px" }}
-      className={`flex flex-row h-full w-full
+      style={{ height: 250 + "px" }}
+      className={`self-start flex flex-row w-full
         rounded-bl-lg rounded-br-3xl bg-gray-400 relative`}
     >
       <DPad />
@@ -23,7 +23,7 @@ const GameControls = ({ play, generation, togglePlay, reset }) => {
       />
       <Button text="Reset" x={205} y={180} action={reset} />
 
-      <div className="ml-4 font-jose text-blue-800">{`Generation: ${generation}`}</div>
+      <div className="mt-1 ml-4 font-jose text-blue-800">{`Generation: ${generation}`}</div>
 
       <Speaker />
     </div>

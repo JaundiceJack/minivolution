@@ -13,7 +13,7 @@ const DPad = () => {
         onMouseLeave={(e) => setUp(false)}
         id="dpad-up"
         className={`mx-auto absolute left-10 w-5 h-10 bg-gray-800
-        rounded-t border-t border-gray-400 transform duration-150 hover:translate-y-1
+        rounded-t border-t border-gray-400 transform duration-150 hover:translate-y-0.5
         ${down && "lift-up"}`}
       />
       <div

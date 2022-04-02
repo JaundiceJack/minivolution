@@ -3,7 +3,7 @@ import Instructions from "./instructions.js";
 
 const Home = () => {
   return (
-    <div className="h-full flex xl:flex-row flex-col justify-center relative mt-5">
+    <div className="flex xl:flex-row flex-col justify-center relative mt-5 mb-5">
       <Game />
       <Instructions />
     </div>

@@ -30,12 +30,12 @@ const GameWindow = ({ size, cells, toggleCell }) => {
   };
 
   return (
-    <div className="h-full w-full rounded-t-xl">
+    <div className="w-full rounded-t-xl">
       <div className="pt-6 bg-gray-400 rounded-t-xl shadow-lg relative">
-        <div className="absolute left-6 top-0 h-6 w-2 bg-gray-500 opacity-25 border-t  border-white" />
-        <div className="absolute right-6 top-0 h-6 w-2 bg-gray-500 opacity-25 border-t  border-white" />
+        <div className="absolute left-6 top-0 h-6 w-2 bg-gray-500 opacity-25 border-t border-white" />
+        <div className="absolute right-6 top-0 h-6 w-2 bg-gray-500 opacity-25 border-t border-white" />
         <div className="absolute left-12 top-1 h-4 w-16 bg-gray-500 opacity-25 rounded-full border-b border-white" />
-        <div className="w-full h-2 bg-gray-500 mb-2 opacity-25 border-r border-l border-white border-b" />
+        <div className="w-full h-2 bg-gray-500 mb-2 opacity-25 border-r border-l border-gray-300 border-b" />
         <div className="mx-4 sm:px-7 py-4 bg-gray-600 rounded-xl rounded-br-3xl">
           <div
             className="h-80 w-80 bg-black rounded-lg mx-auto"
