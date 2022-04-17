@@ -1,10 +1,9 @@
 import { Canvas, useLoader } from "@react-three/fiber";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { Suspense } from "react";
-//import modelPath from "./Gameboy3.glb";
 
 const Model = () => {
-  const gltf = useLoader(GLTFLoader, "./Gameboy3.gltf");
+  const gltf = useLoader(GLTFLoader, '/Gameboy3.gltf');
   return (
     <>
       <primitive position={[0, 0, 0]} object={gltf.scene} scale={1} />
