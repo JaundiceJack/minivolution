@@ -7,9 +7,10 @@ const Home = () => {
     <div className="flex xl:flex-row flex-col justify-center relative mt-5 mb-5">
       <Link
         to="/three"
-        className="self-start mr-4 bg-green-400 hover:bg-green-600 p-2 rounded-full"
+        className={`self-start mr-4 bg-green-400 hover:bg-green-600
+          h-10 w-10 flex items-center justify-center font-semibold rounded-full`}
       >
-        3
+        3D
       </Link>
       <Game />
       <Instructions />
